@@ -24,7 +24,6 @@ public struct TagsList {
     public init(tags: IdentifiedArrayOf<TagModel>, activeTagKey: TagModel.Key) {
       self.tags = tags
       self.activeTagKey = activeTagKey
-      self.destination = .edit(.init(tags: tags))
     }
   }
 
