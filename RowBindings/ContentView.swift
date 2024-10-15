@@ -1,21 +1,18 @@
-//
-//  ContentView.swift
-//  RowBindings
-//
-//  Created by Brad Howes on 10/15/24.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+      let tags = TagModel.tags()
+      TagsListView(
+        store: Store(
+          initialState: .init(
+            tags: .init(uniqueElements: tags),
+            activeTagKey: tags[0].key
+          )) {
+            TagsList()
+          }
+      )
     }
 }
 

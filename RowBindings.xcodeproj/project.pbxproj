@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BD90A27D2CBF0FB600CBB260 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BD90A27C2CBF0FB600CBB260 /* ComposableArchitecture */; };
+		BD90A28C2CBF12D000CBB260 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = BD90A28B2CBF12D000CBB260 /* Tagged */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BD90A25F2CBF0F9000CBB260 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD90A28C2CBF12D000CBB260 /* Tagged in Frameworks */,
+				BD90A27D2CBF0FB600CBB260 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = RowBindings;
 			packageProductDependencies = (
+				BD90A27C2CBF0FB600CBB260 /* ComposableArchitecture */,
+				BD90A28B2CBF12D000CBB260 /* Tagged */,
 			);
 			productName = RowBindings;
 			productReference = BD90A24D2CBF0F8F00CBB260 /* RowBindings.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = BD90A2442CBF0F8F00CBB260;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BD90A27B2CBF0FB600CBB260 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				BD90A28A2CBF12D000CBB260 /* XCRemoteSwiftPackageReference "swift-tagged" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BD90A24E2CBF0F8F00CBB260 /* Products */;
 			projectDirPath = "";
@@ -416,7 +429,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -455,7 +468,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -591,6 +604,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD90A27B2CBF0FB600CBB260 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.1;
+			};
+		};
+		BD90A28A2CBF12D000CBB260 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-tagged";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD90A27C2CBF0FB600CBB260 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD90A27B2CBF0FB600CBB260 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		BD90A28B2CBF12D000CBB260 /* Tagged */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD90A28A2CBF12D000CBB260 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = Tagged;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD90A2452CBF0F8F00CBB260 /* Project object */;
 }
